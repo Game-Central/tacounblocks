@@ -14,20 +14,23 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
    </head>
-   <body style="background-color: #111;">
+     <body style="background-color: #111;">
       <!-- IT WORKS yes-->
       <!--NAVBAR-->
-      <div id="mySidebar" class="sidebar" onmouseover="openSidebar()" onmouseout="closeSidebar()">
+      <div id="mySidebar" class="sidebar" onmouseover="openSidebar()" onmouseout="closeSidebar()" rel="keep-params">
          <img src="images/logo.png" style="width:70px; position: absolute; top: 10px; left: 10px;"><br>
-         <a href="index.html"><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a>
-         <a href="search.html"><i class="material-icons">search</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Search</a></span></a>
-         <a href="extra.html"><i class="material-icons">category</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Extras</a></span></a>
+         <a href="index.html" rel="keep-params"><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a>
+         <a href="search.html" rel="keep-params"><i class="material-icons">search</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Search</a></span></a>
+         <div class="active"> 
+           <a href="extra.html"><i class="material-icons">category</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Extras</a></span></a>
+         </div>
          <a href="settings.html"><i class="material-icons">settings</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Settings</span></a>
-         <div class="active"><a href="info.html"><i class="material-icons">info</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;About<span></a></div><br>
+         <a href="info.html"><i class="material-icons">info</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;About<span></a>
          
       </div>
 
-      <div class="main" id="main" ><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="main" id="main" >
+        
       </div>
       <!--SCRIPTS-->
          <script>

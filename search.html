@@ -2,11 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Google Ads -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8764983445155798"crossorigin="anonymous"></script>
-      
-    <script src="JS/EnablePopups.js"></script>
-    <script src="JS/UrlHide.js"></script>
+    <script src="JS/universal.js" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -146,6 +142,7 @@ body {
          <img src="images/logo.png" style="width:70px; position: absolute; top: 10px; left: 10px;"><br>
          <a href="index.html"><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a>
          <div class="active"><a href="search.html"><i class="material-icons">search</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Search</a></span></a></div>
+         <a href="extra.html"><i class="material-icons">category</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Extras</a></span></a>
          <a href="settings.html"><i class="material-icons">settings</i><span class="icon-text"></span></span>&nbsp;&nbsp;&nbsp;&nbsp;Settings</span></a>
          <a href="info.html"><i class="material-icons">info</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;About<span></a><br>
          
@@ -265,5 +262,15 @@ function checkList() {
                 }
                   
          </script>
+        <script>
+        [...document.querySelectorAll('a')].forEach(e=>{
+        //add window url params to to the href's params
+          const url = new URL(e.href)
+          for (let [k,v] of new URLSearchParams(window.location.search).entries()){
+            url.searchParams.set(k,v)
+          }
+          e.href = url.toString();
+        })
+        </script>
 </body>
 </html>
