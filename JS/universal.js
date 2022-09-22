@@ -141,10 +141,7 @@ if (localStorage.getItem('UrlHiderEnabled') == "true") {
 }
 
 //Arc
-var script = $('<script>', {
-    type: 'text/javascript',
-    src: 'https://arc.io/widget.min.js#dzrHh9TF'
-});
+var script = $('<script>', {type: 'text/javascript',src: 'https://arc.io/widget.min.js#dzrHh9TF'});
 
 script[0].setAttribute("async", "");
 document.head.appendChild(script[0])
