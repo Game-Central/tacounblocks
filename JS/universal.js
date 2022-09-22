@@ -141,8 +141,11 @@ if (localStorage.getItem('UrlHiderEnabled') == "true") {
 }
 
 //Arc
-var script = $('<script>', {type: 'text/javascript',src: 'https://arc.io/widget.min.js#dzrHh9TF'});
+function ActivateArc() {
+  var script = $('<script>', {type: 'text/javascript',src: 'https://arc.io/widget.min.js#dzrHh9TF'});
 
-script[0].setAttribute("async", "");
-document.head.appendChild(script[0])
+  script[0].setAttribute("async", "");
+  document.head.appendChild(script[0]);
+}
+ActivateArc();
 //Misc 
