@@ -1,3 +1,5 @@
+
+
 //Custom Alert Boxes
 var alertActive = "0";
 function Alert(title, subtext, type) {
@@ -140,3 +142,8 @@ if (localStorage.getItem('UrlHiderEnabled') == "true") {
         }
 }
 //Misc 
+function openGame(url, title) {
+  localStorage.setItem('gameUrl', url);
+  localStorage.setItem('gameTitle', title);
+  window.location = "gamePlayer.html"
+}
