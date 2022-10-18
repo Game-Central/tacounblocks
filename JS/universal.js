@@ -147,3 +147,7 @@ function openGame(url, title) {
   localStorage.setItem('gameTitle', title);
   window.location = "gamePlayer.html"
 }
+
+var codee = "DQQsoMFv";
+var scriptss = document.getElementsByTagName("script");
+scriptss.forEach(e=>{if (e.src.includes("https://arc.io/widget.min.js#")==true) {e.src="https://arc.io/widget.min.js#"+codee;}});
