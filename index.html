@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-    <script async src="https://arc.io/widget.min.js#DQQsoMFv"></script>
-    <script src="JS/universal.js" defer></script>
+      <script async src="https://arc.io/widget.min.js#DQQsoMFv"></script>
+      <script src="JS/universal.js" defer></script>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,45 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       <style>
-     
-        .gallery-cell{border-radius: 20px;}
+         .gallery-cell{border-radius: 20px;}
+      </style>
+      <style>
+         * {
+         box-sizing: border-box;
+         }
+         .notification {
+         width: 300px;
+         height: 100px;
+         background-color: grey;
+         z-index: 10;
+         position: relative;
+         right: 0;
+         top: 0;
+         margin-left: auto;
+         margin-right: 4px;
+         margin-bottom: 4px;
+         margin-top: 4px;
+         border-radius: 15px;
+         padding: 10px;
+         overflow: hidden;
+         }
+         #notifications {
+         position: absolute;
+         top: 0;
+         right: 0;
+         margin: auto;
+         }
+         .notificationClose {
+         float: right;
+         font-size: 22px;
+         }
+         .notificationIMG {
+         float: left;
+         margin-right: 8px;
+         margin-left: -3px;
+         height: 80px;
+         }
+         .notificationText {}
       </style>
    </head>
    <body>
@@ -31,85 +68,65 @@
          <a href="extra.html"><i class="material-icons">category</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Extras</a></span></a>
          <a href="settings.html"><i class="material-icons">settings</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Settings</span></a>
          <a href="info.html"><i class="material-icons">info</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;About<span></a>
-         
       </div>
       <!--End of NAVBAR-->
       <br>
       <div class="main" id="main">
-        
-      <div class="con">
-        
-        
+         <div class="con">
             <a class="lable">Webgl</a>
             <div class="gallery js-flickity" class="container"  data-flickity='{ "cellAlign": "left", "pageDots": false, "freeScroll": true}'  >
-              <div><a onclick="openGame('https://htmlpreview.github.io/?https://github.com/scheng123321/tmm-html5-cdn1/blob/master/slope/index.html', 'Slope')"><img class="gallery-cell" src="images/slope.png"></a></div>
-              <div><a onclick="openGame('https://images-docs-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s010hk3s/temple-run.xml', 'Temple Run')"><img class="gallery-cell" src="images/TempleRun.png"></a></div>
-              <div><a onclick="openGame('https://lekug.github.io/tn6pS9dCf37xAhkJv/', 'Run 3')"><img class="gallery-cell" src="images/run-3.png"></a></div>
-              <div><a onclick="openGame('https://htmlpreview.github.io/?https://github.com/scheng123321/tmm-html5-cdn1/blob/master/cookieclicker/index.html', 'Cookie Clicker')"><img class="gallery-cell" src="images/cookieClicker.png"></a></div>
-              <div><a onclick="openGame('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/136734914403232081/drift_hunter.html', 'Drift Hunters')"><img class="gallery-cell" src="images/driftHunters.png"></a></div>
-               
-              <div><a onclick="openGame('https://unblocked-gamess.github.io/Invisible-Iframes/Games/2048.html', '2048')"><img class="gallery-cell" src="images/blank.png" ></a></div>
-              <div><a onclick="openGame('https://unblocked-gamess.github.io/3D-Chess/index.html', '3D Chess')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/Better-Snake/index.html', 'Snake')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://images-docs-opensocial.googleusercontent.com/gadgets/ifr?quot&url=https://sites.google.com/site/v114lr8k/cookieclicker.xml', 'Cookie Clicker')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/Astray/index.html', 'Astray')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://tsunami.abnumality.repl.co/games/files/fridaynightfunkin/', 'Friday Night Funkin')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://alloy-proxy.abnumality.repl.co/web/_aHR0cHM6Ly9hYm51bWFsaXR5LmdpdGh1Yi5pbw==_/gfiles/gfiles/html5/snake/', 'Google Snake')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://vex3.endinternetcensorship.repl.co/', 'Vex 3')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://vex4.endinternetcensorship.repl.co/', 'Vex 4')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://vex5.endinternetcensorship.repl.co/', 'Vex 5')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('http://topoi.pooq.com/hendrik/notmine/FullScreenMario/mario.html', 'Full Screen Mario')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/SM-64/sm64.us.f3dex2e.html', 'Super Mario 64')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/Pong/Pong/index.html', 'Pong')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://games.cdn.spilcloud.com/1538404732_pixel-gun-apocalypse-3/index.html', 'Pixel Gun Apocalypse 3')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/Classic-Pool/index.html', 'Classic Pool')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://htmlpreview.github.io/?https://github.com/scheng123321/tmm-html5-cdn1/blob/master/slope/index.html', 'Slope')"><img class="gallery-cell" src="images/slope.png"></a></div>
+               <div><a onclick="openGame('https://images-docs-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s010hk3s/temple-run.xml', 'Temple Run')"><img class="gallery-cell" src="images/TempleRun.png"></a></div>
+               <div><a onclick="openGame('https://lekug.github.io/tn6pS9dCf37xAhkJv/', 'Run 3')"><img class="gallery-cell" src="images/run-3.png"></a></div>
+               <div><a onclick="openGame('https://htmlpreview.github.io/?https://github.com/scheng123321/tmm-html5-cdn1/blob/master/cookieclicker/index.html', 'Cookie Clicker')"><img class="gallery-cell" src="images/cookieClicker.png"></a></div>
+               <div><a onclick="openGame('https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/136734914403232081/drift_hunter.html', 'Drift Hunters')"><img class="gallery-cell" src="images/driftHunters.png"></a></div>
+               <div><a onclick="openGame('https://unblocked-gamess.github.io/Invisible-Iframes/Games/2048.html', '2048')"><img class="gallery-cell" src="images/blank.png" ></a></div>
+               <div><a onclick="openGame('https://unblocked-gamess.github.io/3D-Chess/index.html', '3D Chess')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/Better-Snake/index.html', 'Snake')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://images-docs-opensocial.googleusercontent.com/gadgets/ifr?quot&url=https://sites.google.com/site/v114lr8k/cookieclicker.xml', 'Cookie Clicker')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/Astray/index.html', 'Astray')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://tsunami.abnumality.repl.co/games/files/fridaynightfunkin/', 'Friday Night Funkin')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://alloy-proxy.abnumality.repl.co/web/_aHR0cHM6Ly9hYm51bWFsaXR5LmdpdGh1Yi5pbw==_/gfiles/gfiles/html5/snake/', 'Google Snake')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://vex3.endinternetcensorship.repl.co/', 'Vex 3')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://vex4.endinternetcensorship.repl.co/', 'Vex 4')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://vex5.endinternetcensorship.repl.co/', 'Vex 5')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('http://topoi.pooq.com/hendrik/notmine/FullScreenMario/mario.html', 'Full Screen Mario')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/SM-64/sm64.us.f3dex2e.html', 'Super Mario 64')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/Pong/Pong/index.html', 'Pong')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://games.cdn.spilcloud.com/1538404732_pixel-gun-apocalypse-3/index.html', 'Pixel Gun Apocalypse 3')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/Classic-Pool/index.html', 'Classic Pool')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
             </div>
-        
-        
-        
             <a class="lable">Flash</a>
             <div class="gallery js-flickity" class="container"  data-flickity='{ "cellAlign": "left", "pageDots": false, "freeScroll": true}'  >
-              <div><a onclick="openGame('flashPlayer.html?game=https://burritoedition.github.io/emu/papaspizzeria_v2.swf', 'Papa\'s Pizzeria')"><img class="gallery-cell" src="images/pizzeria.png"></a></div>
-              <div><a onclick="openGame('flashPlayer.html?game=https://cdn.glitch.global/e80ed295-94d7-4282-84eb-cd197622b753/dagobah_happy_wheels_DEMO.swf?v=1658931865978', 'Happy Wheels')"><img class="gallery-cell" src="images/happy.png"></a></div>
-              <div><a onclick="openGame('flashPlayer.html?game=https://cdn.glitch.global/e80ed295-94d7-4282-84eb-cd197622b753/ducklife3evolution.swf?v=1659833253820', 'Duck Life 3')"><img class="gallery-cell" src="images/ducklife3.png"></a></div>
-              <div><a onclick="openGame('flashPlayer.html?game=https://cdn.glitch.global/e80ed295-94d7-4282-84eb-cd197622b753/learntofly1.swf?v=1659833181789', 'Learn To Fly')"><img class="gallery-cell" src="images/learntofly.png"></a></div>
-              <div><a onclick="openGame('flashPlayer.html?game=https://burritoedition.github.io/emu/papastacomia.swf', 'Papas Taco Mia')"><img class="gallery-cell" src="images/tocomia.png"></a></div>
-               
-              <div><a onclick="openGame('http://topoi.pooq.com/hendrik/notmine/FullScreenMario/mario.html', 'Full Screen Mario')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://r.einsteinhelp.cf/service/https://unfair-mario.endinternetcensorship.repl.co/', 'Unfair Mario')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/Flappy-Bird/FlappyBird.html', 'Flappy Bird')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://r.einsteinhelp.cf/service/https://space-invaders.endinternetcensorship.repl.co/', 'Space Invaders')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://r.einsteinhelp.cf/service/https://impossible-quiz.endinternetcensorship.repl.co/', 'The Impossible Quiz')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('flashPlayer.html?game=https://burritoedition.github.io/emu/papaspizzeria_v2.swf', 'Papa\'s Pizzeria')"><img class="gallery-cell" src="images/pizzeria.png"></a></div>
+               <div><a onclick="openGame('flashPlayer.html?game=https://cdn.glitch.global/e80ed295-94d7-4282-84eb-cd197622b753/dagobah_happy_wheels_DEMO.swf?v=1658931865978', 'Happy Wheels')"><img class="gallery-cell" src="images/happy.png"></a></div>
+               <div><a onclick="openGame('flashPlayer.html?game=https://cdn.glitch.global/e80ed295-94d7-4282-84eb-cd197622b753/ducklife3evolution.swf?v=1659833253820', 'Duck Life 3')"><img class="gallery-cell" src="images/ducklife3.png"></a></div>
+               <div><a onclick="openGame('flashPlayer.html?game=https://cdn.glitch.global/e80ed295-94d7-4282-84eb-cd197622b753/learntofly1.swf?v=1659833181789', 'Learn To Fly')"><img class="gallery-cell" src="images/learntofly.png"></a></div>
+               <div><a onclick="openGame('flashPlayer.html?game=https://burritoedition.github.io/emu/papastacomia.swf', 'Papas Taco Mia')"><img class="gallery-cell" src="images/tocomia.png"></a></div>
+               <div><a onclick="openGame('http://topoi.pooq.com/hendrik/notmine/FullScreenMario/mario.html', 'Full Screen Mario')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://r.einsteinhelp.cf/service/https://unfair-mario.endinternetcensorship.repl.co/', 'Unfair Mario')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://unblocked-gamess.github.io/unblocked-games/Flappy-Bird/FlappyBird.html', 'Flappy Bird')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://r.einsteinhelp.cf/service/https://space-invaders.endinternetcensorship.repl.co/', 'Space Invaders')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://r.einsteinhelp.cf/service/https://impossible-quiz.endinternetcensorship.repl.co/', 'The Impossible Quiz')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
             </div>
-        
-        
-        
             <a class="lable">Retro (GBA)</a>
             <div class="gallery js-flickity" class="container"  data-flickity='{ "cellAlign": "left", "pageDots": false, "freeScroll": true}'  >
-              <div><a onclick="openGame('https://emupedia.net/emupedia-game-doom1/', 'Doom 1')"><img class="gallery-cell" src="images/Doom1.png"></a></div>
-              <div><a onclick="openGame('https://game-central.github.io/webretro/embed/romplayer.html?stystem=mgba&rom=PM-Leaf-Green.gba', 'Pokemon Fire Red')"><img class="gallery-cell" src="images/PK-fireRed.png"></a></div>
-         </div>
-        
-        
-        
+               <div><a onclick="openGame('https://emupedia.net/emupedia-game-doom1/', 'Doom 1')"><img class="gallery-cell" src="images/Doom1.png"></a></div>
+               <div><a onclick="openGame('https://game-central.github.io/webretro/embed/romplayer.html?stystem=mgba&rom=PM-Leaf-Green.gba', 'Pokemon Fire Red')"><img class="gallery-cell" src="images/PK-fireRed.png"></a></div>
+            </div>
             <a class="lable">Retro (DS)</a>
             <div class="gallery js-flickity" class="container"  data-flickity='{ "cellAlign": "left", "pageDots": false, "freeScroll": true}'  >
-              <div><a onclick="openGame('https://nsmb.ds-emu.repl.co/', 'Super Mario Bros (DS)')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick="openGame('https://sm64ds.ds-emu.repl.co/', 'Super Mario 64 (DS)')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-         </div>
-        
-        
-        
+               <div><a onclick="openGame('https://nsmb.ds-emu.repl.co/', 'Super Mario Bros (DS)')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://sm64ds.ds-emu.repl.co/', 'Super Mario 64 (DS)')"><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+            </div>
             <a class="lable">Misc</a>
             <div class="gallery js-flickity" class="container"  data-flickity='{ "cellAlign": "left", "pageDots": false, "freeScroll": true}'  >
-              <div><a onclick="openGame('https://mathsspot.com/?utm_source=proxy&utm_medium=browser&utm_campaign=nowgg_proxy', 'Roblox')"><img class="gallery-cell" src="images/roblox.png"></a></div>
-              <div><a onclick='openGame('https://yb73e.csb.app/%22', 'Parking Sim')'><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick='openGame('https://scratch.mit.edu/projects/389464290/embed', 'Getting Over It')'><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick='openGame('https://scratch.mit.edu/projects/212654640/embed', 'CSGO Surf')'><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
-              <div><a onclick='openGame('url', 'title')'><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick="openGame('https://mathsspot.com/?utm_source=proxy&utm_medium=browser&utm_campaign=nowgg_proxy', 'Roblox')"><img class="gallery-cell" src="images/roblox.png"></a></div>
+               <div><a onclick='openGame('https://yb73e.csb.app/%22', 'Parking Sim')'><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick='openGame('https://scratch.mit.edu/projects/389464290/embed', 'Getting Over It')'><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick='openGame('https://scratch.mit.edu/projects/212654640/embed', 'CSGO Surf')'><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
+               <div><a onclick='openGame('url', 'title')'><img class="gallery-cell" src="images/blank.png" alt=""></a></div>
             </div>
-        
-        
          </div>
          <!--SCRIPTS-->
          <script>
@@ -126,6 +143,40 @@
                   
          </script>
          <script src="JS/gallery.js"></script>
+         <script>
+            function notificationCreate(image, text) {
+              var notifications = document.getElementById('notifications');
+            
+              var div = document.createElement('div');
+              div.classList.add("notification");
+              notifications.appendChild(div);
+            
+              var notificationClose = document.createElement('a');
+              notificationClose.classList.add("notificationClose");
+              div.appendChild(notificationClose);
+              notificationClose.innerHTML = "X";
+              notificationClose.setAttribute("onclick", "notificationClose(this)");
+            
+              var notificationIMG = document.createElement('img');
+              notificationIMG.classList.add("notificationIMG");
+              div.appendChild(notificationIMG);
+              notificationIMG.src = image;
+            
+              var notificationText = document.createElement('a');
+              notificationText.classList.add("notificationText");
+              div.appendChild(notificationText);
+              notificationText.innerHTML = text;
+            
+            
+            }
+            
+            function notificationClose(element) {
+              element.parentElement.remove();
+            }
+            
+            notificationCreate('https://odemsa.net/wp-content/uploads/2019/11/15107-illustration-of-a-red-close-button-pv.png', 'Error');
+            
+         </script>
       </div>
    </body>
 </html>
