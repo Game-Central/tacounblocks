@@ -36,24 +36,30 @@
          border-radius: 15px;
          padding: 10px;
          overflow: hidden;
+         z-index:10000;
          }
          #notifications {
          position: absolute;
          top: 0;
          right: 0;
          margin: auto;
+         z-index:10001;
          }
          .notificationClose {
          float: right;
          font-size: 22px;
+         z-index:10002;
          }
          .notificationIMG {
+         z-index:10002;
          float: left;
          margin-right: 8px;
          margin-left: -3px;
          height: 80px;
          }
-         .notificationText {}
+         .notificationText {
+         z-index:10002;
+         }
       </style>
    </head>
    <body>
