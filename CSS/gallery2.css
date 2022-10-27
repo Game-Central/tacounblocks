@@ -6,6 +6,10 @@
     margin: 10px auto;
     
   }
+.gallery div {
+    background-color: #333; 
+}
+
 .gallery-cell { 
   transition: transform 500ms; 
     /* width: 28%; */ 
