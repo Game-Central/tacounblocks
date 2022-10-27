@@ -9,7 +9,7 @@
 .gallery-cell { 
   transition: transform 500ms; 
     /* width: 28%; */ 
-    background: #8C8; 
+    background: #333; 
     counter-increment: gallery-cell;
      /* height: 200px; */ 
      margin-right: 10px;
