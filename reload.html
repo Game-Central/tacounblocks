@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<title>Reloading</title>
+<style>
+    #img {
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    #txt {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        color: white;
+        margin: auto;
+        height: 60px;
+        font-size: 60px;
+        text-align: center;
+    }
+
+    body {
+        overflow: hidden;
+        background-color: #111;
+    }
+</style>
+
+<head>
+</head>
+
+<body>
+    <div>
+        <img id='img' src="https://thumbs.gfycat.com/IdealisticHarmlessHogget-max-1mb.gif">
+        <div id="txt"><a>Reloading</a></div>
+    </div>
+    <script>
+    url = (new window.URL(window.location.href)).searchParams.get('url') 
+
+
+var delay = ( function() {
+    var timer = 0;
+    return function(callback, ms) {
+        clearTimeout (timer);
+        timer = setTimeout(callback, ms);
+    };
+})();
+
+delay(function(){
+window.location = url;
+}, 2000 );
+    </script>
+</body>
+
+</html>
