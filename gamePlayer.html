@@ -32,10 +32,16 @@
         <div style="text-align: center;">
            <iframe style="border:0px #000000 none;"height="600px" width="90%" id="frame"></iframe>
         </div>
+         <button onclick="reload()">Reload</button>
       </div>
         
          <!--SCRIPTS-->
          <script>
+            function reload() {
+               iframe = document.getElementById("frame");
+               oldURL = iframe.src
+               iframe.src = 'reload.html?url='+oldURL;
+            }
             function openSidebar() {
                     console.log("opening sidebar");
                     document.getElementById("mySidebar").style.width = "200px";
