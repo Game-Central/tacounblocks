@@ -58,6 +58,7 @@
         <div style="text-align: center;">
          <button onclick="reload()" class="frameBTN">Reload</button>
          <button onclick="aboutBlank()" class="frameBTN">About:Blank</button>
+         <button onclick="report()" class="frameBTN">Report Game Bug</button>
            <iframe style="border:0px #000000 none;"height="600px" width="90%" id="frame" allowfullscreen></iframe>
         </div>
       </div>
@@ -89,6 +90,10 @@
 		    win.document.getElementsByTagName('head')[0].appendChild(link);
     };
 		link.href = "https://qgxym.gq/src/imgs/FA.png";
+	    }
+	    function report() {
+		var link = "https://docs.google.com/forms/d/e/1FAIpQLSepuV_mGDPQvT32RNJ_fXYR1yyzgfFnrOuRWBOb7qF-PoP4tQ/viewform?usp=pp_url&entry.1857822431=Game:+"+localStorage.getItem('gameTitle')+"%0A%0ADescription:%0A";
+	    	window.open(link);
 	    }
             function openSidebar() {
                     console.log("opening sidebar");
