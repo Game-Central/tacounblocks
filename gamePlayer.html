@@ -58,7 +58,6 @@
         <div style="text-align: center;">
          <button onclick="reload()" class="frameBTN">Reload</button>
          <button onclick="aboutBlank()" class="frameBTN">About:Blank</button>
-         <button onclick="fullscreen()" class="frameBTN">Fullscreen</button>
            <iframe style="border:0px #000000 none;"height="600px" width="90%" id="frame" allowfullscreen></iframe>
         </div>
       </div>
@@ -70,12 +69,8 @@
                oldURL = iframe.src
                iframe.src = 'reload.html?url='+oldURL;
             }
-	    function fullscreen() {
-                iframe = document.getElementById("frame");
-		iframe.requestFullscreen();
-	    }
 	    function aboutBlank() {
-                iframe = document.getElementById("frame");
+                iiframe = document.getElementById("frame");
 		win = window.open();
 		win.document.body.style.margin = "0";
 		win.document.body.style.height = "100vh";
@@ -84,7 +79,7 @@
 		iframe.style.width = "100%";
 		iframe.style.height = "100%";
 		iframe.style.margin = "0";
-		iframe.src = iframe.src;
+		iframe.src = iiframe.src;
 		win.document.body.appendChild(iframe);
 	    }
             function openSidebar() {
