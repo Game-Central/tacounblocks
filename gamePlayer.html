@@ -64,9 +64,9 @@
         
          <!--SCRIPTS-->
          <script>
-            function reload() {
+	    function reload() {
                iframe = document.getElementById("frame");
-               oldURL = iframe.src
+               oldURL = iframe.src;
                iframe.src = 'reload.html?url='+oldURL;
             }
 	    function aboutBlank() {
@@ -88,7 +88,7 @@
 		    link = win.document.createElement('link');
 		    link.rel = 'icon';
 		    win.document.getElementsByTagName('head')[0].appendChild(link);
-		}:
+    };
 		link.href = "https://qgxym.gq/src/imgs/FA.png";
 	    }
             function openSidebar() {
@@ -106,9 +106,9 @@
                    titles= titles.replace("&nbsp;&nbsp;&nbsp;&nbsp;", "");
                    document.title = "Taco Unblocks | " + titles;
                  }
-           title()
+           title();
            document.getElementById('title').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;" + localStorage.getItem('gameTitle');
-           document.getElementById('frame').src = localStorage.getItem('gameUrl')
+           document.getElementById('frame').src = localStorage.getItem('gameUrl');
          </script>
          <script src="../../JS/gallery.js"></script>
       </div>
