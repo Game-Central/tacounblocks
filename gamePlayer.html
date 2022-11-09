@@ -82,6 +82,14 @@
 		iframe.style.margin = "0";
 		iframe.src = iiframe.src;
 		win.document.body.appendChild(iframe);
+
+		var link = win.document.querySelector("link[rel~='icon']");
+		if (!link) {
+		    link = win.document.createElement('link');
+		    link.rel = 'icon';
+		    win.document.getElementsByTagName('head')[0].appendChild(link);
+		}
+		link.href = window.location.host+"/src/imgs/FA.png";
 	    }
             function openSidebar() {
                     console.log("opening sidebar");
