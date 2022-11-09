@@ -54,7 +54,7 @@
       </div>
 
       <div class="main" id="main"><br>
-         <h1 class="lable"id="title">&nbsp;&nbsp;&nbsp;&nbsp;</h1><br>
+        <h1 class="lable"id="title">&nbsp;&nbsp;&nbsp;&nbsp; </h1><br>
         <div style="text-align: center;">
          <button onclick="reload()" class="frameBTN">Reload</button>
          <button onclick="aboutBlank()" class="frameBTN">About:Blank</button>
@@ -65,8 +65,6 @@
         
          <!--SCRIPTS-->
          <script>
-		document.getElementById('txt1').innerHTML = localStorage.getItem('gameTitle');
-
             function reload() {
                iframe = document.getElementById("frame");
                oldURL = iframe.src
