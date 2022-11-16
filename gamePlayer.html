@@ -1,3 +1,33 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@Game-Central 
+Game-Central
+/
+tacounblocks
+Private
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+tacounblocks/gamePlayer.html
+@Game-Central
+Game-Central Update gamePlayer.html
+Latest commit 0c26c76 7 days ago
+ History
+ 1 contributor
+120 lines (115 sloc)  5.29 KB
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +95,7 @@
         
          <!--SCRIPTS-->
          <script>
+		var siteDomain = "https://qgxym.gq/";
 	    function reload() {
                iframe = document.getElementById("frame");
                oldURL = iframe.src;
@@ -80,16 +111,18 @@
 		iframe.style.width = "100%";
 		iframe.style.height = "100%";
 		iframe.style.margin = "0";
-		iframe.src = localStorage.getItem('gameUrl');
+		var url = localStorage.getItem('gameUrl');
+		if (url.includes("flash/flashPlayer.html?game=")) {url = siteDomain+url}
+		iframe.src = url;
 		win.document.body.appendChild(iframe);
-
+https://qgxym.gq
 		var link = win.document.querySelector("link[rel~='icon']");
 		if (!link) {
 		    link = win.document.createElement('link');
 		    link.rel = 'icon';
 		    win.document.getElementsByTagName('head')[0].appendChild(link);
     };
-		link.href = "https://qgxym.gq/src/imgs/FA.png";
+		link.href = siteDomain+"src/imgs/FA.png";
 	    }
 	    function report() {
 		var link = "https://docs.google.com/forms/d/e/1FAIpQLSepuV_mGDPQvT32RNJ_fXYR1yyzgfFnrOuRWBOb7qF-PoP4tQ/viewform?usp=pp_url&entry.1857822431=Game:+"+localStorage.getItem('gameTitle')+"%0A%0ADescription:%0A>>Enter Bug Info Here <<";
@@ -118,3 +151,17 @@
       </div>
    </body>
 </html>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
