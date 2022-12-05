@@ -6,6 +6,7 @@
 </head>
 <body>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <a href="#" onclick="signOut();">Sign out</a>
     <br>
     <img id="img">
     <br>
@@ -17,9 +18,15 @@
     <script>
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
-            document.getElementById().src = profile.getImageUrl('img');
+            document.getElementById('img').src = profile.getImageUrl();
             document.getElementById('name').innerHTML = profile.getName();
-            document.getElementById().innerHTML = profile.getEmail('email');
+            document.getElementById('email').innerHTML = profile.getEmail();
+        }  
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
         }
     </script>
 </body>
