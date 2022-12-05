@@ -2,10 +2,9 @@
 <html>
 <head>
     <meta name="google-signin-client_id" content="578790009380-30cbb7ab24grvqor40p2tmla1rafke32.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div id="my-signin2"></div>
     <a href="#" onclick="signOut();">Sign out</a>
     <br>
     <img id="img">
@@ -16,12 +15,27 @@
     <a>Email: </a>
     <a id="email"></a>
     <script>
-        function onSignIn(googleUser) {
+        function onSuccess(googleUser) {
             var profile = googleUser.getBasicProfile();
             document.getElementById('img').src = profile.getImageUrl();
             document.getElementById('name').innerHTML = profile.getName();
             document.getElementById('email').innerHTML = profile.getEmail();
-        }  
+        }
+        function onFailure(error) {
+            console.log(error);
+        }
+        function renderButton() {
+            gapi.signin2.render('my-signin2', {
+                'scope': 'profile email',
+                'width': 240,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'dark',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+            });
+        }
+        
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
@@ -29,5 +43,6 @@
             });
         }
     </script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </body>
 </html>
