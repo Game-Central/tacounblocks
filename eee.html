@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="google-signin-client_id" content="578790009380-30cbb7ab24grvqor40p2tmla1rafke32.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <br>
+    <img id="img">
+    <br>
+    <a>Name: </a>
+    <a id="name"></a>
+    <br>
+    <a>Email: </a>
+    <a id="email"></a>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            document.getElementById().src = profile.getImageUrl('img');
+            document.getElementById('name').innerHTML = profile.getName();
+            document.getElementById().innerHTML = profile.getEmail('email');
+        }
+    </script>
+</body>
+</html>
