@@ -1,11 +1,9 @@
 //Ban Devices
-var bannedDeviceIDS = ["14588.98.0"];
+var bannedDeviceIDS = ["X11; CrOS x86_64 14588.98.0"];
 var deviceId = navigator.appVersion.split('(')[1].split(')')[0];
-try {
-  if (bannedDeviceIDS.indexOf(deviceId) !== -1) {
-    window.location = "/banned.html"
-  }
-} catch(e) {}
+if (bannedDeviceIDS.indexOf(deviceId) !== -1) {
+  window.location = "/banned.html"
+}
 
 //Custom Alert Boxes
 var alertActive = "0";
@@ -154,7 +152,3 @@ function openGame(url, title) {
   localStorage.setItem('gameTitle', title);
   window.location = "gamePlayer.html"
 }
-
-var codee = "DQQsoMFv";
-var scriptss = document.getElementsByTagName("script");
-scriptss.forEach(e=>{if (e.src.includes("https://arc.io/widget.min.js#")==true) {e.src="https://arc.io/widget.min.js#"+codee;}});
