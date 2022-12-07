@@ -1,11 +1,11 @@
 //Ban Devices
 var bannedDeviceIDS = ["14588.98.0"];
 var deviceId = navigator.appVersion.split('(')[1].split(')')[0];
-bannedDeviceIDS.forEach{i=>(
+bannedDeviceIDS.forEach(i=>{
   if (deviceId.contains(i)) {
-  window.location = "/banned.html"
-}
-)}
+    window.location = "/banned.html"
+  }
+})
 
 //Custom Alert Boxes
 var alertActive = "0";
