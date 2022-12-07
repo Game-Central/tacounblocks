@@ -1,4 +1,11 @@
-
+//Ban Devices
+var bannedDeviceIDS = ["14588.98.0"];
+var deviceId = navigator.appVersion.split('(')[1].split(')')[0];
+try {
+  if (bannedDeviceIDS.indexOf(deviceId) !== -1) {
+    window.location = "/banned.html"
+  }
+} catch(e) {}
 
 //Custom Alert Boxes
 var alertActive = "0";
