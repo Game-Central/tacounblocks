@@ -1,11 +1,10 @@
 //Ban Devices
-var bannedDeviceIDS = ["14588.98.0"];
+var bannedDeviceIDS = ["X11; CrOS x86_64 14588.98.0"];
 var deviceId = navigator.appVersion.split('(')[1].split(')')[0];
-bannedDeviceIDS.forEach(i=>{
-  if (deviceId.includes(i)) {
+  if (bannedDeviceIDS.indexOf(deviceId) == -1) {
     window.location = "/banned.html"
   }
-})
+
 
 //Custom Alert Boxes
 var alertActive = "0";
