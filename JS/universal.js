@@ -1,5 +1,5 @@
 //Ban Devices
-var bannedDeviceIDS = ["X11; CrOS aarch64 15117.111.0"];
+var bannedDeviceIDS = [""];
 var deviceId = navigator.appVersion.split('(')[1].split(')')[0];
 if (bannedDeviceIDS.indexOf(deviceId) !== -1) {
   window.location = "/banned.html"
