@@ -59,28 +59,12 @@
       }
     </style>
     <script>
-      function handleCredentialResponse(googleUser) {
+      function googleSignIn(googleUser) {
         /*var profile = googleUser.getBasicProfile();
         var useremail = profile.getEmail(); */
         console.log(googleUser)
       }
     </script>
-    <script>
-      document.addEventListener("keypress", function(event) {
-        if (event.keyCode == 77) {
-          acceptedaccount();
-        }
-      });
-    </script>
-     <script>
-  window.onload = function () {
-    google.accounts.id.initialize({
-      client_id: '578790009380-9hpl56em05qpic9t2pi9t4s06chovfb6.apps.googleusercontent.com',
-      callback: handleCredentialResponse
-    });
-    google.accounts.id.prompt();
-  };
-</script>
   </head>
   <body>
     <a align="center"><button href="#" onclick="signOut();" id="signouttop" class="topsignout" style="display: none;">Sign out</button></a>
@@ -90,12 +74,23 @@
       <div id="denied" style="display: none;"><a><strong>Access Denied<br>Please Try A Different Account</strong></a></div>
       
       
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <div id="g_id_onload"
-         data-client_id="578790009380-9hpl56em05qpic9t2pi9t4s06chovfb6.apps.googleusercontent.com"
-         data-callback="handleCredentialResponse">
-    </div>
-    <div class="g_id_signin" data-type="standard"></div>
+     data-client_id="578790009380-9hpl56em05qpic9t2pi9t4s06chovfb6.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-callback="googleSignIn"
+     data-nonce=""
+     data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="filled_black"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left">
+</div>
       
       
       <br>
