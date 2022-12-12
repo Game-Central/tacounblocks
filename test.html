@@ -58,8 +58,10 @@
         overflow:hidden;
       }
     </style>
-  <meta name="google-signin-client_id" content="578790009380-e0o5t4d1qgqfrdqa58hn5invfahit741.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <div id="g_id_onload"
+         data-client_id="578790009380-e0o5t4d1qgqfrdqa58hn5invfahit741.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse">
+    </div>
     <script>
       function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
@@ -126,8 +128,6 @@
         auth2.signOut().then(function () {
         console.log('User signed out.');
         });
-        document.getElementById("iframe").style.display = "none";
-        document.getElementById("signouttop").style.display = "none";
       }
     </script>
   </body>
