@@ -58,10 +58,6 @@
         overflow:hidden;
       }
     </style>
-    <div id="g_id_onload"
-         data-client_id="578790009380-e0o5t4d1qgqfrdqa58hn5invfahit741"
-         data-callback="handleCredentialResponse">
-    </div>
     <script>
       function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
@@ -105,7 +101,12 @@
       <div id="denied" style="display: none;"><a><strong>Access Denied<br>Please Try A Different Account</strong></a></div>
       
       
-      <div class="g-signin2" data-onsuccess="handleCredentialResponse"></div>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <div id="g_id_onload"
+         data-client_id="578790009380-e0o5t4d1qgqfrdqa58hn5invfahit741.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
       
       
       <br>
