@@ -92,12 +92,13 @@
         }
       });
     </script>
-    <script>
-  window.onGoogleLibraryLoad = () => {
-   google.accounts.id.initialize({
-     ...
-   });
-   google.accounts.id.prompt();
+     <script>
+  window.onload = function () {
+    google.accounts.id.initialize({
+      client_id: '578790009380-e0o5t4d1qgqfrdqa58hn5invfahit741.apps.googleusercontent.com',
+      callback: handleCredentialResponse
+    });
+    google.accounts.id.prompt();
   };
 </script>
   </head>
