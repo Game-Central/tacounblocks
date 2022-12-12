@@ -28,13 +28,19 @@
       function deniedaccount() {
         console.log('Account Denied')
       }
-    </script>
-    <script>
+      
       document.addEventListener("keypress", function(event) {
         if (event.keyCode == 77) {
           acceptedaccount();
         }
       });
+      
+      window.gapi.client
+        .init({
+          clientId:'578790009380-e0o5t4d1qgqfrdqa58hn5invfahit741',
+          scope: "email",
+          plugin_name:'Taco Unblocks'
+        })
     </script>
 </head>
 <body>
