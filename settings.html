@@ -99,16 +99,16 @@
         var bannedEmails = ["nathanaschilling@gvusd.org"]
         
         if (bannedEmails.indexOf(useremail) != -1) {
-          deniedaccount();
+          deniedaccount(profile);
         } else {
-          acceptedaccount();
+          acceptedaccount(profile);
         }
       }
 
-      function acceptedaccount() {
+      function acceptedaccount(profile) {
         document.getElementById("img").src = profile.getImageUrl()
       }
-      function deniedaccount() {
+      function deniedaccount(profile) {
         window.location = '/banned.html' 
       }
          </script>
