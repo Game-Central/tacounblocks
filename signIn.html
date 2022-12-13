@@ -33,7 +33,7 @@
       
       function onSignIn(googleUser) {
          localStorage.setItem("userEmail", googleUser.getBasicProfile().getEmail());
-         bannedEmail();
+         bannedEmail(googleUser.getBasicProfile().getEmail());
       }
         
       
