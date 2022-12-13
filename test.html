@@ -18,9 +18,9 @@
         var bannedEmails = ["nathanaschilling@gvusd.org"]
         
         if (bannedEmails.indexOf(useremail) != -1) {
-          acceptedaccount();
-        } else {
           deniedaccount();
+        } else {
+          acceptedaccount();
         }
       }
 
@@ -28,7 +28,7 @@
         console.log('Account Accepted')
       }
       function deniedaccount() {
-        console.log('Account Denied')
+        console.log('Account Denied') 
       }
     </script>
   </head>

@@ -30,7 +30,6 @@
 	    '(\\#[-a-z\\d_]*)?$','i'); // validate fragment locator
 	  return !!urlPattern.test(urlString);
 	}
-      import { bannedEmails } from "JS/bannedEmails.js"
       
       function onSignIn(googleUser) {
          localStorage.setItem("userEmail", googleUser.getBasicProfile().getEmail());
