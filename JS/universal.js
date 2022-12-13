@@ -163,14 +163,10 @@ function bannedEmail(email) {
             }
          } else {
             var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
-            if (isValidUrl(redirectURL)) {
-              window.location = redirectURL
-            } else {
-              window.location = "index.html"
-            };
+            window.location = redirectURL
          }
 }
 
-if (!window.location.href.includes('banned') || !window.location.href.includes('signin')) {
+if (!window.location.href.includes('banned') && !window.location.href.includes('signin')) {
   bannedEmail(localStorage.getItem("userEmail"));
 }
