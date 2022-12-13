@@ -98,7 +98,8 @@
         profile.getEmail();
         var useremail = profile.getEmail();
 
-        var bannedEmails = ["nathanaschilling@gvusd.org"]
+        import {bannedEmails} from "JS/bannedEmails.js"
+
         
         if (bannedEmails.indexOf(useremail) != -1) {
           deniedaccount(profile);
