@@ -1,0 +1,1 @@
+export var bannedEmails = ["nathanaschilling@gvusd.org"]
