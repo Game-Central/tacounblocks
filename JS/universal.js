@@ -148,6 +148,6 @@ function openGame(url, title) {
   window.location = "gamePlayer.html"
 }
 
-if (localStorage.getItem('userEmail') == "") {
+if (localStorage.getItem('userEmail') == "" || localStorage.getItem('userEmail') == null) {
    window.location = "signIn.html?redirect="+window.location.href
 }
