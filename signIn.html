@@ -16,7 +16,7 @@
       }
     </style>
   </head>
-  <body style="background-color: #111;" onload="signOut()">
+  <body style="background-color: #111;">
     <div id="signIn" class="g-signin2" data-onsuccess="onSignIn"></div>
     
     <script>
@@ -29,25 +29,34 @@
 	    '(\\#[-a-z\\d_]*)?$','i'); // validate fragment locator
 	  return !!urlPattern.test(urlString);
 	}
+      import { bannedEmails } from "JS/bannedEmails.js"
       
       function onSignIn(googleUser) {
-        localStorage.setItem("userEmail", googleUser.getBasicProfile().getEmail());
-        var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
-        if (isValidUrl(redirectURL)) {
-            window.location = redirectURL
-        } else {
-            window.location = "index.html"
-        }
+         localStorage.setItem("userEmail", googleUser.getBasicProfile().getEmail());
+         if (bannedEmails.indexOf(useremail) != -1) {
+            window.location = "banned.html";
+         } else {
+            var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
+            if (isValidUrl(redirectURL)) {
+              window.location = redirectURL
+            } else {
+              window.location = "index.html"
+            };
+         }
+      }
+        
+        
       }
       
       
       function signOut() {
+        localStorage.setItem("userEmail", "");
         var auth2 = gapi.auth2.getAuthInstance();
         auth2.signOut().then(function () {
         console.log('User signed out.');
-        localStorage.setItem("userEmail", "");
         });
       }
+      signOut();
     </script>
   </body>
 </html>
