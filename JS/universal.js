@@ -152,6 +152,7 @@ if (localStorage.getItem('userEmail') == "" || localStorage.getItem('userEmail')
    window.location = "signIn.html?redirect="+window.location.href
 }
 
-var a = document.createElement('script').src="JS/bannedEmails.js";
+var a = document.createElement('script');
 document.body.appendChild(a);
-bannedEmail(localStorage.setItem("userEmail"));
+a.src="JS/bannedEmails.js";
+bannedEmail(localStorage.getItem("userEmail"));
