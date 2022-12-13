@@ -1,10 +1,3 @@
-//Ban Devices
-var bannedDeviceIDS = [""];
-var deviceId = navigator.appVersion.split('(')[1].split(')')[0];
-if (bannedDeviceIDS.indexOf(deviceId) !== -1) {
-  window.location = "/banned.html"
-}
-
 
 //Custom Alert Boxes
 var alertActive = "0";
@@ -147,9 +140,14 @@ if (localStorage.getItem('UrlHiderEnabled') == "true") {
         window.location.href = url[Math.floor(Math.random() * url.length)];
         }
 }
+
 //Misc 
 function openGame(url, title) {
   localStorage.setItem('gameUrl', url);
   localStorage.setItem('gameTitle', title);
   window.location = "gamePlayer.html"
+}
+
+if (localStorage.getItem('userEmail') == "") {
+   window.location = "signIn.html?redirect="+window.location.href
 }
