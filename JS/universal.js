@@ -171,4 +171,6 @@ function bannedEmail(email) {
          }
 }
 
-bannedEmail(localStorage.getItem("userEmail"));
+if (!window.location.href.includes('banned') || !window.location.href.includes('signin')) {
+  bannedEmail(localStorage.getItem("userEmail"));
+}
