@@ -151,3 +151,7 @@ function openGame(url, title) {
 if (localStorage.getItem('userEmail') == "" || localStorage.getItem('userEmail') == null) {
    window.location = "signIn.html?redirect="+window.location.href
 }
+
+var a = document.createElement('script').src="JS/bannedEmails.js";
+document.body.appendChild(a);
+bannedEmail(localStorage.setItem("userEmail"));
