@@ -19,7 +19,7 @@
   <body style="background-color: #111;">
     <a class="text">Sorry This Email Address Has Been Banned From Accessing Our Site Please Try A Different Account</a>
     <div id="signIn" class="g-signin2" data-onsuccess="onSignIn"></div>
-    
+    <script src="JS/bannedEmails.js"></script>
     <script>
       const isValidUrl = urlString=> {
 	  	var urlPattern = new RegExp('^(https?:\\/\\/)?'+ // validate protocol
@@ -34,17 +34,7 @@
       
       function onSignIn(googleUser) {
          localStorage.setItem("userEmail", googleUser.getBasicProfile().getEmail());
-         if (bannedEmails.indexOf(useremail) != -1) {
-            var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
-            window.location = "banned.html?redirect="+redirectURL;
-         } else {
-            var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
-            if (isValidUrl(redirectURL)) {
-              window.location = redirectURL
-            } else {
-              window.location = "index.html"
-            };
-         }
+         bannedEmail();
       }
         
       
