@@ -149,7 +149,7 @@ function openGame(url, title) {
 }
 
 if (localStorage.getItem('userEmail') == "" || localStorage.getItem('userEmail') == null) {
-  !window.location.href.includes('signIn')) {
+  if (!window.location.href.includes('signIn')) {
       window.location = "signIn.html?redirect="+window.location.href
   }
 }
