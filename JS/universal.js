@@ -149,10 +149,26 @@ function openGame(url, title) {
 }
 
 if (localStorage.getItem('userEmail') == "" || localStorage.getItem('userEmail') == null) {
-   window.location = "signIn.html?redirect="+window.location.href
+  !window.location.href.includes('signIn')) {
+      window.location = "signIn.html?redirect="+window.location.href
+  }
 }
 
-var a = document.createElement('script');
-document.body.appendChild(a);
-a.src="JS/bannedEmails.js";
+function bannedEmail(email) {
+  var bannedEmails = ["nathanaschilling@gvusd.org"]
+  if (bannedEmails.indexOf(email) != -1) {
+            var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
+            if (!window.location.href.includes('banned')) {
+            window.location = "banned.html?redirect="+redirectURL;
+            }
+         } else {
+            var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
+            if (isValidUrl(redirectURL)) {
+              window.location = redirectURL
+            } else {
+              window.location = "index.html"
+            };
+         }
+}
+
 bannedEmail(localStorage.getItem("userEmail"));
