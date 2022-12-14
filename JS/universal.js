@@ -148,10 +148,17 @@ function openGame(url, title) {
   window.location = "gamePlayer.html"
 }
 
-if (localStorage.getItem('userEmail') == "" || localStorage.getItem('userEmail') == null) {
-  if (!window.location.href.includes('signIn')) {
-      window.location = "signIn.html?redirect="+window.location.href
-  }
+
+if (localStorage.getItem('userEmail') == null) {
+  localStorage.setItem('userEmail','')
+}
+
+if (
+    window.location.href.includes('signIn') == false && 
+    window.location.href.includes('banned') == false && 
+    localStorage.getItem('userEmail') == ''
+   ) {
+  window.location = "signIn.html?redirect="+window.location.href
 }
 
 function bannedEmail(email) {
@@ -167,6 +174,6 @@ function bannedEmail(email) {
          }
 }
 
-if (!window.location.href.includes('banned') && !window.location.href.includes('signin')) {
+if (localStorage.getItem("userEmail") != '') {
   bannedEmail(localStorage.getItem("userEmail"));
 }
