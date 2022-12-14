@@ -129,7 +129,9 @@ function openGame(url, title) {
 
 
 function bannedEmail(email) {
-  var bannedEmails = ["nathanaschilling@gvusd.org"]
+  
+  var bannedEmails = ["nathanaschilling@gvusd.org","byronawasemiller@gvusd.org"]
+  
   if (bannedEmails.indexOf(email) != -1) {
             if (window.location.href.includes('banned') == false) {
               window.location = "./banned.html?redirect="+window.location.href;
