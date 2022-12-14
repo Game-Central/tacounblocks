@@ -147,6 +147,12 @@ function bannedEmail(email) {
             if (window.location.href.includes('banned') == false) {
               window.location = "./banned.html?redirect="+redirectURL;
             }
+  } else if (
+    window.location.href.includes('signIn') || 
+    window.location.href.includes('banned')
+  ) {
+    var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
+    window.location = redirectURL
   }
 }
 
