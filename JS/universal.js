@@ -145,7 +145,7 @@ if (localStorage.getItem('UrlHiderEnabled') == "true") {
 function openGame(url, title) {
   localStorage.setItem('gameUrl', url);
   localStorage.setItem('gameTitle', title);
-  window.location = "gamePlayer.html"
+  window.location = "./gamePlayer.html"
 }
 
 
@@ -158,19 +158,21 @@ if (
     window.location.href.includes('banned') == false && 
     localStorage.getItem('userEmail') == ''
    ) {
-  window.location = "signIn.html?redirect="+window.location.href
+  window.location = "./signIn.html?redirect="+window.location.href
 }
 
 function bannedEmail(email) {
   var bannedEmails = ["nathanaschilling@gvusd.org"]
   if (bannedEmails.indexOf(email) != -1) {
             var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
-            if (!window.location.href.includes('banned')) {
-            window.location = "banned.html?redirect="+redirectURL;
+            if (window.location.href.includes('banned') == false) {
+              window.location = "./banned.html?redirect="+redirectURL;
             }
          } else {
             var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
-            window.location = redirectURL
+            if (redirectURL == null || redirectURL == undefined) {
+              window.location = './index.html'
+            } else {window.location = redirectURL}
          }
 }
 
