@@ -83,9 +83,13 @@
       </div>
       <div class="main" id="main" style="margin-left: 100px;">
          <img id="userimg" src="images/blankpfp.png" style="height: 90px;object-fit:cover;border-radius:30%;"><br>
-         <a>Account Name:</a><a id="userName"></a><br>
-         <a>Account Email:</a><a id="userEmail"></a><br>
+         <a><strong>Account Name:</strong> </a><a id="userName"></a><br>
+         <a><strong>Account Email:</strong> </a><a id="userEmail"></a><br><br>
          <div id="signIn" class="g-signin2" data-onsuccess="onSignIn"></div>
+         <div id="signOut" onclick="signOut" style="display: none; width: 120px; height: 36px; background-color: white;">
+          <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" style="width:18px;height:18px;">
+          <a>Sign Out</a>
+         </div>
       </div>
       <!--SCRIPTS-->
       <script>
@@ -99,6 +103,9 @@
          document.getElementById("userName").innerHTML = profile.getName();
          document.getElementById("userEmail").innerHTML = profile.getEmail();
            
+         document.getElementById("signIn").style.display = 'none';
+         document.getElementById("signOut").style.display = 'block';
+           
          localStorage.setItem("userEmail", profile.getEmail());
          }
          
@@ -107,6 +114,9 @@
          auth2.signOut().then(function () {
          console.log('User signed out.');
          localStorage.setItem("userEmail", "");
+           
+         document.getElementById("signIn").style.display = 'block';
+         document.getElementById("signOut").style.display = 'none';
          
          document.getElementById("userimg").src = 'images/blankpfp.png';
          });
