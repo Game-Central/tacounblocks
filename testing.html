@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://arc.io/widget.min.js#DQQsoMFv"></script>
+    <style>
+      .title {
+        color: #fff;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+      }
+      .text {
+        color: #666;
+        text-align: center;
+        font-size: 20px;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+      }
+      .text2 {
+        color: #666;
+        text-align: center;
+        font-size: 20px;
+        position: absolute;
+        top: 125px;
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body style="background-color: #111;">
+    <a class="title">Close This Tab</a><br>
+    <a class="text">This Page No Longer Has A Use</a> 
+    <a class="text2">So Please Close This Tab</a>
+    <script>
+      var win = window.open();
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      var iframe = win.document.createElement("iframe");
+      iframe.style.border = "none";
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.margin = "0";
+      var url = window.location.hostname + '/index.html';
+      url = url.replace("www.","https://");
+      iframe.src = url;
+      win.document.body.appendChild(iframe);
+    </script>
+  </body>
+</html>
