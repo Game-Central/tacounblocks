@@ -128,18 +128,6 @@ function openGame(url, title) {
 }
 
 
-if (localStorage.getItem('userEmail') == null) {
-  localStorage.setItem('userEmail','')
-}
-
-if (
-    window.location.href.includes('signIn') == false && 
-    window.location.href.includes('banned') == false && 
-    localStorage.getItem('userEmail') == ''
-   ) {
-  window.location = "./signIn.html?redirect="+window.location.href
-}
-
 function bannedEmail(email) {
   var bannedEmails = ["nathanaschilling@gvusd.org"]
   if (bannedEmails.indexOf(email) != -1) {
@@ -154,7 +142,24 @@ function bannedEmail(email) {
     window.location = redirectURL
   }
 }
+if (window.location.href.startsWith('file://') == false) {
+    
+  if (localStorage.getItem('userEmail') == null) {
+    localStorage.setItem('userEmail','')
+  }
 
-if (localStorage.getItem("userEmail") != '') {
-  bannedEmail(localStorage.getItem("userEmail"));
+  if (
+    window.location.href.includes('signIn') == false && 
+    window.location.href.includes('banned') == false && 
+    localStorage.getItem('userEmail') == ''
+  ) {
+    window.location = "./signIn.html?redirect="+window.location.href
+  }
+
+  if (localStorage.getItem("userEmail") != '') {
+    bannedEmail(localStorage.getItem("userEmail"));
+  }
+
 }
+
+document.body.setAttribute('oncontextmenu', 'return false;');
