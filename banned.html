@@ -22,8 +22,9 @@
     <script src="JS/universal.js" defer></script>
     <script>
       function onSignIn(googleUser) {
-         localStorage.setItem("userEmail", googleUser.getBasicProfile().getEmail());
-         bannedEmail(googleUser.getBasicProfile().getEmail());
+         var email = googleUser.getBasicProfile().getEmail();
+         bannedEmail(email);
+         localStorage.setItem("userEmail", email);
       }
     </script>
   </body>
