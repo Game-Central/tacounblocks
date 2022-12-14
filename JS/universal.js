@@ -162,4 +162,4 @@ if (window.location.href.startsWith('file://') == false) {
 
 }
 
-document.body.setAttribute('oncontextmenu', 'return false;');
+document.getElementsByTagName('html')[0].setAttribute('oncontextmenu', 'return false;');
