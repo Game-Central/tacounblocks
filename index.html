@@ -67,15 +67,36 @@
    <body>
       <!-- IT WORKS yes-->
       <!--NAVBAR-->
-      <div id="mySidebar" class="sidebar" onmouseover="openSidebar()" onmouseout="closeSidebar()" rel="keep-params">
+      <div id="mySidebar" class="sidebar" onmouseover="openSidebar()" onmouseout="closeSidebar()">
          <img src="images/logo.png" style="width:70px; position: absolute; top: 10px; left: 10px;"><br>
-         <div class="active"> 
-            <a href="index.html" rel="keep-params"><span><i class="material-icons">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span></a>
-         </div>
-         <a href="search.html" rel="keep-params"><i class="material-icons">search</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Search</a></span></a>
-         <a href="extra.html"><i class="material-icons">category</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Extras</a></span></a>
-         <a href="settings.html"><i class="material-icons">settings</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Settings</span></a>
-         <a href="info.html"><i class="material-icons">info</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;About<span></a>
+        
+       <div class="active">
+         <a onclick="window.location='index.html'">
+              <i class="material-icons">home</i>
+              <span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Home</span>
+         </a>
+       </div>
+        
+         <a onclick="window.location='search.html'">
+           <i class="material-icons">search</i>
+           <span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Search</span>
+         </a>
+        
+         <a onclick="window.location='extra.html'">
+           <i class="material-icons">category</i>
+           <span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Extras</span>
+         </a>
+        
+         <a onclick="window.location='settings.html'">
+           <i class="material-icons">settings</i>
+           <span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Settings</span>
+         </a>
+        
+         <a onclick="window.location='info.html'">
+           <i class="material-icons">info</i>
+           <span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;About</span>
+         </a>
+        
       </div>
       <!--End of NAVBAR-->
       <br>
