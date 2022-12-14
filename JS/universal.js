@@ -143,9 +143,8 @@ if (
 function bannedEmail(email) {
   var bannedEmails = ["nathanaschilling@gvusd.org"]
   if (bannedEmails.indexOf(email) != -1) {
-            var redirectURL = (new window.URL(window.location.href)).searchParams.get('redirect');
             if (window.location.href.includes('banned') == false) {
-              window.location = "./banned.html?redirect="+redirectURL;
+              window.location = "./banned.html?redirect="+window.location.href;
             }
   } else if (
     window.location.href.includes('signIn') || 
