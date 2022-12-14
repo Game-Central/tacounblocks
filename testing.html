@@ -48,6 +48,14 @@
       var url = 'https://'+window.location.hostname + '/index.html';
       iframe.src = url;
       win.document.body.appendChild(iframe);
+      win.document.title = 'Taco Unblocks | Home'
+		var link = win.document.querySelector("link[rel~='icon']");
+		if (!link) {
+		    link = win.document.createElement('link');
+		    link.rel = 'icon';
+		    win.document.getElementsByTagName('head')[0].appendChild(link);
+    };
+		link.href = 'https://'+window.location.hostname+"/src/imgs/FA.png";
     </script>
   </body>
 </html>
