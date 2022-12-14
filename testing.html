@@ -45,8 +45,7 @@
       iframe.style.width = "100%";
       iframe.style.height = "100%";
       iframe.style.margin = "0";
-      var url = window.location.hostname + '/index.html';
-      url = url.replace("www.","https://");
+      var url = 'https://'+window.location.hostname + '/index.html';
       iframe.src = url;
       win.document.body.appendChild(iframe);
     </script>
