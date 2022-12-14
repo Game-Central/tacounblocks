@@ -14,11 +14,22 @@
         left: 0;
         right: 0;
       }
+      .google {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  /* -1/2 width */
+  margin-top: -10px;
+  /* -1/2 height */
+      }
     </style>
   </head>
   <body style="background-color: #111;">
     <a class="text">Sorry This Email Address Has Been Banned From<br>Accessing Our Site Please Try A Different Account<br>Please Click The Button Below<br>And Choose A Different Account</a>
-    <div id="signIn" class="g-signin2" data-onsuccess="onSignIn" style="position: absolute;right: 0; left: 0; bottom: 0; top: 0; margin: auto;"></div>
+    <div id="signIn" class="g-signin2 google" data-onsuccess="onSignIn" ></div>
     <script src="JS/universal.js" defer></script>
     <script>
       function onSignIn(googleUser) {
