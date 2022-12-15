@@ -88,6 +88,9 @@
 	    function reload() {
                iframe = document.getElementById("frame");
                oldURL = iframe.src;
+               try {
+                oldURL = oldURL.replace('reload.html?url=','');
+               } catch(e) {}
                iframe.src = 'reload.html?url='+oldURL;
             }
 	    function aboutBlank() {
@@ -140,17 +143,3 @@ https://qgxym.gq
       </div>
    </body>
 </html>
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
