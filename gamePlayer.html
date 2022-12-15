@@ -87,10 +87,10 @@
 		var siteDomain = "https://qgxym.gq/";
 	    function reload() {
                iframe = document.getElementById("frame");
-               oldURL = iframe.src;
-               try {
-                oldURL = oldURL.replace('reload.html?url=','');
-               } catch(e) {}
+               if (iframe.src.includes('reload.html?url=')) {
+               } else {
+                 var oldURL = iframe.src;
+               }
                iframe.src = 'reload.html?url='+oldURL;
             }
 	    function aboutBlank() {
