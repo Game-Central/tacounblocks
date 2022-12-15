@@ -144,7 +144,7 @@ function bannedEmail(email) {
     window.location = redirectURL
   }
 }
-if (window.location.href.startsWith('file://') == false) {
+if (window.location.href.startsWith('file://') == false && window.location.hostname != '127.0.0.1') {
     
   if (localStorage.getItem('userEmail') == null) {
     localStorage.setItem('userEmail','')
