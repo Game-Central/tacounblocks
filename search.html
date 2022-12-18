@@ -135,7 +135,7 @@ body {
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
    </head>
-   <body style="background-color: #111;">
+   <body>
      <div id="mySidebar" class="sidebar" onmouseover="openSidebar()" onmouseout="closeSidebar()">
          <img src="images/logo.png" style="width:70px; position: absolute; top: 10px; left: 10px;"><br>
         
@@ -167,107 +167,9 @@ body {
          </a>
         
       </div>
-      
-<div class="row">
-  <div id="box"></div>
-  <div class="left" style="
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    white-space: nowrap;;padding: 10px">
-    <input type="text" id="mySearch" onkeyup="checkList()" placeholder="Search.." title="Type in a category">
-    <br><br>
-    <br><br>
-    <div class="grid-container" id="myMenu" style=" padding-left:70px;">     
-
-      
-                
-      <div class="grid-item">
-            <img src="images/slope.png" alt="slope" onclick="window.location = 'games/webgl/slope.html'">
-      </div>    
-      
-      
-      <div class="grid-item">
-            <img src="images/pizzeria.png" alt="Papas Burgeria"  onclick="window.location = 'games/flash/papaspizzeria.html'">
-      </div>    
-      
-      
-      <div class="grid-item">
-            <img src="images/TempleRun.png" alt="Temple Run" onclick="window.location = 'games/webgl/templerun.html'">
-      </div>    
-      
-      
-      <div class="grid-item">
-            <img src="images/Doom1.png" alt="Doom 1" onclick="window.location = 'games/retro/doom1.html'">
-      </div>    
-      
-      
-      <div class="grid-item">
-            <img src="images/run-3.png" alt="Run 3"  onclick="window.location = 'games/webgl/run3.html'">
-      </div>    
-      
-      
-      <div class="grid-item">
-            <img src="images/cookieClicker.png" alt="Cookie Clicker"  onclick="window.location = 'games/webgl/cookieclicker.html'">
-      </div>    
-      
-      
-      <div class="grid-item">
-            <img src="images/driftHunters.png" alt="Drift Hunters" onclick="window.location = 'games/webgl/drifthunters.html'">
-      </div>    
-      
-      
-      
-      
-      <div class="grid-item">
-            <img src="images/happy.png" alt="Drift Hunters" onclick="window.location = 'games/flash/happywheels.html'">
-      </div>    
-      
-      
-      <div class="grid-item">
-            <img src="images/ducklife3.png" alt="Drift Hunters" onclick="window.location = 'games/flash/ducklife3.html'">
-      </div>    
-      
-      
-      <div class="grid-item">
-            <img src="images/learntofly.png" alt="Drift Hunters" onclick="window.location = 'games/flash/learn2fly.html'">
-      </div>    
-      
-      
-      <div class="grid-item">
-            <img src="images/tocomia.png" alt="Drift Hunters" onclick="window.location = 'games/flash/tacomia.html'">
+      <div id="main">
+        <h1 style="margin-left: 20px;">Sorry But This Functionality Is Still Being Worked On</h1>
       </div>
-      
-      
-    </div>
-    
-    <a id="noResults">Sorry No Results Found</a>
-  </div>
-</div>
-            
-<script>
-var input = document.getElementById("mySearch");
-function checkList() {
-  var filter, ul, li, a, i;
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myMenu");
-  li = ul.getElementsByTagName("div");
-  
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("img")[0];
-    if (a.alt.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
-       function go(loc) {
-         window.location = loc;
-       }
-  checkList()
-</script>
 <!--SCRIPTS-->
          <script>
             function openSidebar() {
@@ -282,15 +184,5 @@ function checkList() {
                 }
                   
          </script>
-        <script>
-        [...document.querySelectorAll('a')].forEach(e=>{
-        //add window url params to to the href's params
-          const url = new URL(e.href)
-          for (let [k,v] of new URLSearchParams(window.location.search).entries()){
-            url.searchParams.set(k,v)
-          }
-          e.href = url.toString();
-        })
-        </script>
 </body>
 </html>

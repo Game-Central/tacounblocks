@@ -17,50 +17,15 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       <style>
-         .slider-square {
-         -webkit-appearance: none;
-         width: 100px;
-         height: 24px;
-         background: #d3d3d3;
-         outline: none;
-         opacity:0.9;
-         -webkit-transition: opacity .15s ease-in-out;
-         transition: opacity .15s ease-in-out;
-         }
-         .slider-square:hover {
-         opacity:1;
-         }
-         .slider-square::-webkit-slider-thumb {
-         -webkit-appearance: none;
-         appearance: none;
-         width: 30px;
-         height: 24px;
-         background: #090975;
-         cursor: pointer;
-         }
-         .slider-square::-moz-range-thumb {
-         width: 30px;
-         height: 24px;
-         border: 0;
-         background: #090975;
-         cursor: pointer;
-         }    
          #main {
-         border: 10px solid #111;
-         }
-         .OptionTitle {
-         color: #fff;
-         }
-         .OptionStatis {
-         color: #fff;
-         font-size: 30px;
+         margin: 10px;
          }
          h2 {
-         color: #777;
+         color: var(--text);
          }
       </style>
    </head>
-   <body style="background-color: #111;">
+   <body>
       <!-- IT WORKS yes-->
       <!--NAVBAR-->
      
@@ -124,6 +89,19 @@
             </div>
          </div>
          <div id="signIn" class="g-signin2" data-onsuccess="onSignIn"></div>
+         <br>
+        
+         <div>
+            <h2><u>Site Theme:</u></h2>
+            <br>
+            <a style="margin-left: -5px;">Select A Theme:</a><br>
+            <select id="themeValue" style="width: 140px; height: 30px; font-size: 24px; margin-top: 8px;" onchange="themeChange()">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+           
+         </div>
+        
       </div>
       <!--SCRIPTS-->
       <script>
@@ -157,6 +135,13 @@
          document.getElementById("userEmail").innerHTML = '';
          });
          }
+        
+         function themeChange() {
+            var theme = document.getElementById('themeValue').value;
+            localStorage.setItem('theme', theme);
+            window.location = window.location+'?' 
+         }
+         document.getElementById('themeValue').value = localStorage.getItem('theme' )
       </script>
       <script>
          function openSidebar() {
