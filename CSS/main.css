@@ -3,13 +3,10 @@
 
 
 
-html {
-    scroll-behavior: smooth;
-}
 body {
     margin: 0;
     padding: 0;
-    background-color: #111;
+    background-color: var(--body);
 
 }
 
@@ -61,7 +58,7 @@ body {
 
 
 a {
-    color: #818181;
+    color: var(--text);
     font-family: 'Montserrat', sans-serif;
     padding-left: 1%;
 }
@@ -79,7 +76,7 @@ a {
 
 
 .lable {
-  color: #818181;
+  color: var(--text);
 }
 
 
